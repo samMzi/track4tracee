@@ -1,0 +1,58 @@
+.customExport {
+  margin-top: 150px;
+}
+thead {
+  background-color: #e91e63;
+  color: white;
+}
+
+#loading {
+  z-index: 99999;
+  color: black;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: 0.5s;
+  visibility: visible;
+}
+#loading.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#card-body {
+  visibility: hidden;
+}
+.page-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
+#showMe {
+  animation: cssAnimation 0s 2.5s forwards;
+  visibility: hidden;
+  height: 100%;
+}
+
+@keyframes cssAnimation {
+  to {
+    visibility: visible;
+  }
+}
+
+#hideMe {
+  animation: cssAnimhide 0s 2.5s forwards;
+  visibility: visible;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes cssAnimhide {
+  to {
+    visibility: hidden;
+  }
+}

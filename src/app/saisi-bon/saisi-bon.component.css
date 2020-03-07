@@ -1,0 +1,11 @@
+/*@import url("https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css");
+*/
+.customForm {
+  padding-top: 130px;
+}
+.Selectwrapper {
+  margin: 50px 100px;
+}
+#test-select {
+  width: 200px;
+}

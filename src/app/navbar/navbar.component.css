@@ -1,0 +1,48 @@
+.page-logo {
+  background: #6673fc !important;
+} /*
+.navbar-nav > li.active > a,
+.header-white .page-header.navbar .hor-menu .navbar-nav > li.current > a {
+  color: #4680ff;
+  background-color: transparent;
+}
+
+a.active {
+  background-color: brown !important;
+  color: #4680ff !important;
+}*/
+.navbar-custom ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /*overflow: hidden;*/
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #555;
+  text-align: center;
+  padding: 14px 16px;
+  /*text-decoration: none;*/
+}
+
+li a:hover {
+  /*background-color: #111;*/
+  color: #4680ff !important;
+}
+.active {
+  color: #4680ff !important;
+  /* background-color: aquamarine;*/
+}
+.custom {
+  margin-top: 15px;
+}
+
+.inner {
+  display: table;
+  margin: 0 auto;
+}

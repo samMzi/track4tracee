@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Track4trace</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Begin Web-page scripts -->
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="Responsive Admin Template" />
+    <meta name="author" content="SmartUniversity" />
+    <title>Smart University | Bootstrap Responsive Admin Template</title>
+    <!-- toggle-->
+
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--tagsinput-->
+    <link href="assets/css/jquery-tags-input.css" rel="stylesheet" />
+    <!-- icons -->
+    <link
+      href="assets/css/simple-line-icons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/material-icon.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--bootstrap -->
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/datepicker.css" rel="stylesheet" />
+    <link
+      href="assets/css/bootstrap-datetimepicker.min.css"
+      rel="stylesheet"
+      <link
+      href="assets/css/summernote.css"
+      rel="stylesheet"
+    />
+    <!-- Data Tables -->
+    <link
+      href="assets/css/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/buttons.dataTables.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--select2-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Lite CSS -->
+    <link rel="stylesheet" href="assets/css/material.min.css" />
+    <link rel="stylesheet" href="assets/css/material_style.css" />
+    <!-- inbox style -->
+    <link href="assets/css/inbox.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme Styles -->
+    <link
+      href="assets/css/theme_style.css"
+      rel="stylesheet"
+      id="rt_style_components"
+      type="text/css"
+    />
+    <link href="assets/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/theme-color.css" rel="stylesheet" type="text/css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+
+    <!-- End Web-page scripts -->
+  </head>
+  <body>
+    <app-root></app-root>
+
+    <!-- start js include path -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/jquery.blockui.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-switch.min.js"></script>
+    <script src="assets/js/jquery.sparkline.js"></script>
+    <script src="assets/js/sparkline-data.js"></script>
+    <!-- Common js-->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/theme-color.js"></script>
+    <!-- material -->
+    <script src="assets/js/material.min.js"></script>
+
+    <!-- summernote -->
+    <script src="assets/js/summernote.js"></script>
+
+    <script src="assets/js/summernote-data.js"></script>
+    <!-- end js include path -->
+
+    <!--select2-->
+    <script src="assets/js/select2.js"></script>
+    <script src="assets/js/select2-init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
+    <script>
+      //Select2
+      $.getScript(
+        "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js",
+        function() {
+          /* dropdown and filter select */
+          var select1 = $("#select2")
+            .select2()
+            .on("select2:select", function(e) {
+              var selectValue = $(this).select2("data")[0];
+              console.log(selectValue.id, selectValue.text);
+            });
+
+          /* Select2 plugin as tagpicker */
+          var select2 = $("#tagPicker")
+            .select2({
+              closeOnSelect: false
+            })
+            .on("select2:select", function(e) {
+              var selectValues = $(this).select2("data");
+              var values = selectValues.map(function(d) {
+                return { ID: d.id, Name: d.text };
+              });
+              console.log(values);
+            });
+        }
+      ); //script
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      $(document).on("click", ".nav-link.active", function() {
+        var href = $(this)
+          .attr("href")
+          .substring(1);
+        //alert(href);
+        $(this).removeClass("active");
+        $('.tab-pane[id="' + href + '"]').removeClass("active");
+      });
+      $(document).mouseup(function(e) {
+        var container = $("#tablist"); // target ID or class
+        // if the target of the click isn't the container nor a descendant of the container
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          // get Event here
+          $(".active").removeClass("active");
+        }
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </body>
+</html>

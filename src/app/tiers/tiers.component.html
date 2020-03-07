@@ -1,0 +1,273 @@
+<app-navbar></app-navbar>
+<div class="container-fluid custom">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card card-topline-red">
+        <div class="card-head">
+          <header>Liste des tiers</header>
+          <div class="tools">
+            <a
+              class="fa fa-repeat btn-color box-refresh"
+              href="javascript:;"
+            ></a>
+            <a
+              class="t-collapse btn-color fa fa-chevron-down"
+              href="javascript:;"
+            ></a>
+            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+          </div>
+        </div>
+        <div class="card-body ">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-6">
+              <div class="btn-group">
+                <button
+                  id="addRow1"
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target=".bd-SUIVIDOSSIER-modal-lg"
+                >
+                  Ajout tiers <i class="fa fa-plus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-6">
+              <div class="btn-group pull-right">
+                <button
+                  class="btn deepPink-bgcolor  btn-outline dropdown-toggle"
+                  data-toggle="dropdown"
+                >
+                  Tools
+                  <i class="fa fa-angle-down"></i>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                  <li>
+                    <a href="javascript:;">
+                      <i class="fa fa-print"></i> Print
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <i class="fa fa-file-pdf-o"></i> Save as PDF
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <i class="fa fa-file-excel-o"></i> Export to Excel
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table-scrollable">
+            <table
+              class="table table-striped table-bordered table-hover table-checkable order-column"
+              id="example4"
+            >
+              <thead>
+                <tr>
+                  <th>Client</th>
+                  <th>Adresse 1</th>
+                  <th>Adresse 2</th>
+                  <th>Adresse 3</th>
+
+                  <th>Code postal</th>
+                  <th>Département</th>
+                  <th>Ville</th>
+                  <th>#</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="odd gradeX">
+                  <td>ZODIAC ET</td>
+                  <td>
+                    ROUTE DE TUNIS KM 6
+                  </td>
+
+                  <td>DHARI 8020 NABEUL</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="valigntop">
+                    <div class="btn-group">
+                      <button
+                        class="btn btn-xs deepPink-bgcolor dropdown-toggle no-margin"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Actions
+                        <i class="fa fa-angle-down"></i>
+                      </button>
+                      <ul class="dropdown-menu pull-left" role="menu">
+                        <li>
+                          <a href="javascript:;">
+                            <i class="fas fa-trash"></i> Supprimer
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">
+                            <i class="icon-pen"></i> Modifier
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="odd gradeX">
+                  <td>ZODIAC SEATS TU</td>
+                  <td>
+                    ROUTE DE TUNIS KM 6
+                  </td>
+
+                  <td>EL DHARI</td>
+                  <td>BP 224</td>
+                  <td>8020</td>
+                  <td></td>
+                  <td>SOLIMAN</td>
+                  <td class="valigntop">
+                    <div class="btn-group">
+                      <button
+                        class="btn btn-xs deepPink-bgcolor dropdown-toggle no-margin"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Actions
+                        <i class="fa fa-angle-down"></i>
+                      </button>
+                      <ul class="dropdown-menu pull-left" role="menu">
+                        <li>
+                          <a href="javascript:;">
+                            <i class="icon-docs"></i>Contact
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">
+                            <i class="icon-tag"></i>Modifier
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade bd-SUIVIDOSSIER-modal-lg"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="card card-topline-red">
+          <div class="card-head">
+            <header>SUIVI DOSSIER</header>
+            <div class="tools">
+              <a
+                class="fa fa-repeat btn-color box-refresh"
+                href="javascript:;"
+              ></a>
+              <a
+                class="t-collapse btn-color fa fa-chevron-down"
+                href="javascript:;"
+              ></a>
+              <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="card-body ">
+            <div class="container-fluid">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Nom client complet</label>
+                    <input type="email" class="form-control" id="inputEmail4" />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Nom client abrégé</label>
+                    <input type="email" class="form-control" id="inputEmail4" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">Adresse</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder="1234 Main St"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2">Adresse 2</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress2"
+                    placeholder="Apartment, studio, or floor"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2">Adresse 3</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress2"
+                    placeholder="Apartment, studio, or floor"
+                  />
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-3">
+                    <label for="inputCity">Département</label>
+                    <input type="text" class="form-control" id="inputCity" />
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputCity">Ville</label>
+                    <input type="text" class="form-control" id="inputCity" />
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputState">Pays</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Tel</label>
+                    <input type="email" class="form-control" id="inputEmail4" />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Mail</label>
+                    <input type="email" class="form-control" id="inputEmail4" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Fermer
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

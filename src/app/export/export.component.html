@@ -1,0 +1,338 @@
+<app-navbar></app-navbar>
+<div
+  class="container-fluid customExport"
+  style="position: relative;height:100%;"
+>
+  <div class="row">
+    <div class="col">
+      <div
+        class="card card-topline-red"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
+        <div class="card-head">
+          <header>LISTE DES DOSSIERS</header>
+          <div class="tools">
+            <a
+              class="fa fa-repeat btn-color box-refresh"
+              href="javascript:;"
+            ></a>
+            <a
+              class="t-collapse btn-color fa fa-chevron-down"
+              href="javascript:;"
+            ></a>
+            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+          </div>
+        </div>
+        <img
+          src="../../assets/img/loading/load.gif"
+          style="width: 50px;"
+          id="hideMe"
+        />
+        <div
+          class="card-body"
+          id="showMe"
+          style="margin-left: auto;
+        margin-right: auto;
+        display: block;
+
+        "
+        >
+          <table id="exportTable" class="display " style="width:100%; ">
+            <thead>
+              <tr>
+                <th>Num Dossier</th>
+                <th>Expéditeur</th>
+                <th>Destinataire</th>
+                <th>Point de Sortie</th>
+                <th>Point d'entrée</th>
+                <th>Date d'enlèvement</th>
+                <th>Date de livraison</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody style="background-color: #f3f5f4;">
+              <tr *ngFor="let exp of ListExport">
+                <td>
+                  {{ exp.DOS_LIGNE }}{{ exp.DOS_ACTI }}{{ exp.DOS_TYPE
+                  }}{{ exp.DOS_NUM }}
+                </td>
+                <td>{{ exp.DOS_NOMCLI }}</td>
+                <td>{{ exp.DOS_AD1DES }}</td>
+                <td>{{ exp.DOS_DEPART }}</td>
+                <td>{{ exp.DOS_ARRIVEE }}</td>
+                <td>}</td>
+                <td>}</td>
+                <td>
+                  <button
+                    _ngcontent-qng-c3=""
+                    class="btn btn-primary btn-xs"
+                    data-toggle="modal"
+                    data-target=".bd-example-modal-lg"
+                  >
+                    <i class="fa fa-file" aria-hidden="true"></i></button
+                  >&nbsp;
+                  <button
+                    _ngcontent-qng-c3=""
+                    class="btn btn-success btn-xs"
+                    data-toggle="modal"
+                    data-target=".bd-SUIVIDOSSIER-modal-lg"
+                  >
+                    <i class="fa fa-plane" aria-hidden="true"></i></button
+                  >&nbsp;
+                  <button _ngcontent-qng-c3="" class="btn btn-danger btn-xs">
+                    <i class="fa fa-upload" aria-hidden="true"></i></button
+                  >&nbsp;
+                  <button _ngcontent-qng-c3="" class="btn btn-warning btn-xs">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Num Dossier</th>
+                <th>Expéditeur</th>
+                <th>Destinataire</th>
+                <th>Point de Sortie</th>
+                <th>Point d'entrée</th>
+                <th>Date d'enlèvement</th>
+                <th>Date de livraison</th>
+                <th>Action</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+
+<div
+  class="modal fade bd-example-modal-lg"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">DÉTAILS DOSSIER</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="col">
+          <div class="card card-topline-green">
+            <div class="card-head">
+              <header>Informations</header>
+              <div class="tools">
+                <a
+                  class="fa fa-repeat btn-color box-refresh"
+                  href="javascript:;"
+                ></a>
+                <a
+                  class="t-collapse btn-color fa fa-chevron-down"
+                  href="javascript:;"
+                ></a>
+                <a
+                  class="t-close btn-color fa fa-times"
+                  href="javascript:;"
+                ></a>
+              </div>
+            </div>
+            <div class="card-body ">
+              <div class="table-scrollable">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>Numéro du dossier</td>
+                      <td>35AI800103</td>
+                    </tr>
+                    <tr>
+                      <td>Expéditeur</td>
+                      <td>ZODIAC SEATS FRANCE</td>
+                    </tr>
+                    <tr>
+                      <td>Adresse expéditeur</td>
+                      <td>RUE ROBERT MARECHAL SENIOR ZI LA LIMOISE 36100</td>
+                    </tr>
+                    <tr>
+                      <td>Destinataire</td>
+                      <td>ZODIAC SEATS TUNISIE</td>
+                    </tr>
+                    <tr>
+                      <td>Adresse destinataire</td>
+                      <td>ROUTE DE TUNIS KM 6 EL DHARI BP 224 8020</td>
+                    </tr>
+                    <tr>
+                      <td>Chauffeur</td>
+                      <td>IPC</td>
+                    </tr>
+                    <tr>
+                      <td>Immatricule du cammion</td>
+                      <td>EL433XC</td>
+                    </tr>
+                    <tr>
+                      <td>Airline</td>
+                      <td>EXPRESS AIR CARGO</td>
+                    </tr>
+                    <tr>
+                      <td>Vol N°</td>
+                      <td>7A111/09</td>
+                    </tr>
+                    <tr>
+                      <td>Chargée à</td>
+                      <td>CDG CHARLES DE GAULLE APT/PARIS</td>
+                    </tr>
+                    <tr>
+                      <td>Déchargée à</td>
+                      <td>TUN TUNIS</td>
+                    </tr>
+                    <tr>
+                      <td>EUR1 N°</td>
+                      <td>7A111/09</td>
+                    </tr>
+                    <tr>
+                      <td>T1</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>LTA</td>
+                      <td>23140110</td>
+                    </tr>
+                    <tr>
+                      <td>N° de la facture</td>
+                      <td>20180208A</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade bd-SUIVIDOSSIER-modal-lg"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="card card-topline-red">
+          <div class="card-head">
+            <header>SUIVI DOSSIER</header>
+            <div class="tools">
+              <a
+                class="fa fa-repeat btn-color box-refresh"
+                href="javascript:;"
+              ></a>
+              <a
+                class="t-collapse btn-color fa fa-chevron-down"
+                href="javascript:;"
+              ></a>
+              <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="card-body ">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col">
+                  <div class="table-scrollable">
+                    <table class="table table-striped table-hover">
+                      <thead>
+                        <tr>
+                          <th>Num Dossier</th>
+                          <th>Evènement</th>
+                          <th>Description</th>
+                          <th>Date</th>
+                          <th>Heure</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>35AI800103</td>
+                          <td>
+                            <img
+                              src="assets/img/import/Korawan_M_business12-512.png"
+                              style="width: 50px;"
+                            />
+                          </td>
+                          <td>Enlèvement</td>
+                          <td>08/02/2018</td>
+                          <td>08:45</td>
+                        </tr>
+                        <tr>
+                          <td>35AI800103</td>
+                          <td>
+                            <img
+                              src="assets/img/import/airport-boarding-corridor-passenger-plane-icon-boarding-the-plane-png-512_512.png"
+                              style="width: 70px;"
+                            />
+                          </td>
+                          <td>Embarquement</td>
+                          <td>09/02/2018</td>
+                          <td>12:10</td>
+                        </tr>
+                        <tr>
+                          <td>35AI800103</td>
+                          <td>
+                            <img
+                              src="assets/img/import/order_tracking-512.png"
+                              style="width: 60px;"
+                            />
+                          </td>
+                          <td>Mise en livraison</td>
+                          <td>09/02/2018</td>
+                          <td>19:00</td>
+                        </tr>
+                        <tr>
+                          <td>35AI800103</td>
+                          <td>
+                            <img
+                              src="assets/img/import/Korawan_M_business12-512.png"
+                              style="width: 50px;"
+                            />
+                          </td>
+                          <td>Livraison</td>
+                          <td>09/02/2018</td>
+                          <td>20:30</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Fermer
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

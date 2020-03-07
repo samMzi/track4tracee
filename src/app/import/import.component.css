@@ -1,0 +1,50 @@
+.customImport {
+  margin-top: 150px;
+}
+thead {
+  background-color: #2ab9d0;
+  color: white;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  color: white;
+  opacity: 1;
+  transition: 0.5s;
+  visibility: visible;
+}
+#loading.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#showMe {
+  animation: cssAnimation 0s 2.5s forwards;
+  visibility: hidden;
+  height: 100%;
+}
+
+@keyframes cssAnimation {
+  to {
+    visibility: visible;
+  }
+}
+
+#hideMe {
+  animation: cssAnimhide 0s 2.5s forwards;
+  visibility: visible;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes cssAnimhide {
+  to {
+    visibility: hidden;
+  }
+}
